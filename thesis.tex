@@ -1,0 +1,256 @@
+%\RequirePackage{lineno}
+
+\documentclass[12pt,a4paper]{report}
+
+\usepackage[linktocpage]{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{array}
+%\usepackage{breakurl}
+
+\usepackage[english]{babel}
+\selectlanguage{english}
+\hyphenation{ATLAS}
+\hyphenation{CERN}
+\hyphenation{LHC}
+
+%\usepackage[top=1.8cm, bottom=1.8cm, left=4cm, right=1.5cm]{geometry}
+\usepackage[top=3cm, bottom=3cm, left=4cm, right=3cm]{geometry}
+
+\usepackage{notoccite}
+\usepackage{setspace}
+
+\usepackage{enumerate}
+\usepackage{feynmf}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{url}
+\usepackage{float}
+
+\usepackage{pgfgantt}
+\usepackage{rotating}
+
+\usepackage{cite}
+
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{slashed}
+\usepackage{subfig}
+\usepackage{authblk}
+
+\input{macros}
+
+\usepackage{multirow}
+
+\usepackage{tikz}
+\usepackage{color}
+
+%Create margin for gbl explanation
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
+\usetikzlibrary{shapes,arrows,positioning,calc,decorations,decorations.markings,arrows}
+
+\tikzstyle{mybox} = [draw=blue, dotted, fill=none, very thick,
+    rectangle, rounded corners, inner sep=30pt, inner ysep=35pt]
+
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=7em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, ultra thick, color=black!50, -latex']
+\tikzstyle{cloud} = [draw, ellipse,fill=red!30, node distance=3cm,
+    minimum height=3em]
+
+\tikzstyle{bubble} = [draw, ultra thick, circle, fill=white, text centered,radius=2.5em]
+\tikzstyle{pline} = [draw, very thick, color=black]
+
+\newcommand{\threelines}[3][]{
+  \def\dist{6};
+  \foreach \x in {-1,0,1}
+  {
+    \ifnum \x = 0
+    \path [pline,decoration={markings, mark=at position 0.5 with {\arrow{triangle 60}}}, postaction={decorate}] ([yshift=\dist * \x]#2.east) -- ([yshift=\dist * \x]#3.west);
+    \else    
+    \path [pline] ([yshift=\dist * \x]#2.east) -- ([yshift=\dist * \x]#3.west);
+    \fi
+  };
+}
+
+\newdimen\XCoord
+\newdimen\YCoord
+
+\newcommand*{\ExtractCoordinate}[3]{\path (#1); \pgfgetlastxy{#2}{#3};}%
+
+\newif\
+\newcommand{\twolinesahead}[5][]{
+  \def\dist{6};
+  \newdimen\ym;
+  \newdimen\xm;
+  \newdimen\yf;
+  \newdimen\xf;
+  \ExtractCoordinate{$(#3)$}{\xm}{\ym};
+  \ExtractCoordinate{$(#2)$}{\xf}{\yf};
+  \ifdim \ym < \yf
+  \def\fac{1};
+  \else
+  \def\fac{-1};
+  \fi
+  \path [pline] ([yshift=-\dist * \fac]#2.east) -- (#3.west);
+  \coordinate (m) at ($(#2)!0.5!(#3)$);
+  \coordinate (mp) at ($(m)+(0,1em*\fac)$);
+  \node (nm) at (mp) {#5};
+  \foreach \x in {\fac,0}
+  {
+    \ifnum \x = 0
+    \path [pline, decoration={markings, mark=at position 0.5 with {\arrow{triangle 60}}}, postaction={decorate}] ([yshift=\dist * \x]#2.east) -- ([yshift=\dist * \x]#4.west);
+    \else
+    \path [pline] ([yshift=\dist * \x]#2.east) -- ([yshift=\dist * \x]#4.west);
+    \fi
+  };
+}
+
+\usepackage{datetime}
+
+\newdateformat{mydate}{\monthname[\THEMONTH] \THEYEAR}
+
+%\linenumbers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\newcommand{\rightSignature}[1]{
+\begin{minipage}[c]{\textwidth}
+\vspace{2cm}
+
+\begin{flushright}
+\begin{minipage}{0.65\textwidth}
+\begin{center}
+%\noindent    \makebox[\textwidth][c] {\hrulefill}
+
+\noindent    #1
+\end{center}
+\end{minipage}
+\end{flushright}
+\end{minipage}
+}
+
+\usepackage{fancyhdr}
+
+\begin{document}
+
+\unitlength = 1mm
+
+%\doublespace
+% To add 1.5 line spacing
+\onehalfspace
+
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=0.4\linewidth]{ug.eps}\\[1.0cm]
+
+%\textsc{\LARGE University of Glasgow}\\[0.8cm]
+
+\textsc{\Large Literature Review}\\[0.8cm]
+
+\HRule\\[0.6cm]
+{ \Huge Search for new resonances decaying to a Higgs and W/Z boson in the $b\bar{b}$+l$\nu$ final state for a $\sqrt{s}=14$ TeV, and testbeam alignment studies using prototypes for the inner tracker upgrade at ATLAS }\\[0.6cm]
+\HRule\\[0.7cm]
+
+{
+\Large
+% Author and supervisor
+
+\copyright~\\[1.5cm]
+\emph{Supervisors:} \\
+Prof.~Dr.~David Britton\\
+Dr.~Andy Buckley\\[0.5cm]
+
+School of Physics and Astronomy\\
+College of Science and Engineering\\[1.5cm]
+
+}
+
+\vfill
+
+% Bottom of the page
+{\large \mydate\today}
+
+\end{center}
+\end{titlepage}
+
+
+\pagenumbering{roman}
+%\pagenumbering{arabic}
+
+\begin{abstract}
+\input{parts/abstract.tex}
+\end{abstract}
+\clearpage
+
+\tableofcontents
+\clearpage
+
+%\listoftables
+%\clearpage
+
+%\listoffigures
+%\clearpage
+
+\chapter*{Acknowledgements}
+\input{parts/acknowledgements.tex}
+\clearpage
+
+%\chapter*{Declaration}
+%\input{parts/declaration.tex}
+%\clearpage
+
+%\chapter*{Author's Contribution}
+%\input{contribution.tex}
+%\clearpage
+
+\pagenumbering{arabic}
+
+\pagestyle{fancy}
+
+    \fancyhf{}%
+    \fancyhead[LE,RO]{\thepage}
+    \fancyhead[RE]{\textit{\nouppercase{\rightmark}} }
+    \fancyhead[LO]{\textit{\nouppercase{\rightmark}} }
+    \renewcommand{\headrulewidth}{0pt} % remove lines as well
+    \renewcommand{\footrulewidth}{0pt}
+
+\renewcommand{\chaptermark}[1]{ \markright{\thechapter \hspace{0.2cm} #1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{\thesection \hspace{0.2cm} #1}{} }
+
+%REMEMBER THAT 7 TEV DATA IS SPLIT INTO A SEPARATE CHAPTER.
+
+%Higgs. Symmetry breaking etc. Different productions
+%ATLAS detector
+\chapter{Higgs Searches $(H\rightarrow b\bar{b})$}
+\label{chp:res}
+\input{parts/res.tex}
+\clearpage
+%Decay modes. Our decay. Background for our decay
+\chapter{The integration of the General Broken Lines fitting algorithm into EUTelescope.}
+\label{chp:GBL}
+\input{parts/gbl.tex}
+\clearpage
+
+\chapter{Further Work }
+\label{chp:furtherwork}
+\input{parts/furtherwork.tex}
+\clearpage
+
+\chapter{Guide to Resonance Search}
+\label{chp:guide}
+\input{parts/guide.tex}
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{../bibliography}
+\clearpage
+
+\end{document}
+

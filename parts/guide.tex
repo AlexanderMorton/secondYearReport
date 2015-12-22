@@ -1,0 +1,80 @@
+\section{Introduction}
+This is designed to be an introduction to any analysis and will cover some of the basic ideas needed. However a focus on the the VH analysis give \href{https://cds.cern.ch/record/2054042/files/ATL-COM-PHYS-2015-1180.pdf}{here}
+
+\section{Theory and past searches}
+Need to be filled in after going through theory course again.
+
+\section{Data and MC samples}
+
+Pileup must be taken into account. This is done via reweighting. The quality of the data is validated using the GRL and DQ flags. The simulation of signal and background can be viewed in \ref{section:Simulation}. 
+
+The k-factor is a factor which relates the leading order to the error compared to the full calculation. The filter term is to relate the number of events expected to the number produced. 
+
+To begin to discuss physics objects you need to begin at the xAOD root files created by simulation and data. You can see all the collections and type in an xAOD using:
+
+checkxAOD.py 
+
+
+The ATLAS Muon Combined Performance Group define muons using a series of cut points, this is done for inner detector and muon spectrometer. Both the ID and MS are used in combination to determine the pt and mass of the muon. Note the pt and resolution depend on many factors (magnetic field, scattering, intrinsic resolution), therefore momentum scale and resolution corrections are also applied. This makes the MC and data follow the same distribution. These were determined using the J/$\psi$ (c$\bar{c}$)/Z resonance.  Reconstruction efficiency is allowed to vary with a scale factor which is the ratio of MC/data. This if course depends of pt and $\eta$. 
+
+Isolation criteria for leptons is needed since semi leptonic/hadronic decays are the main source of non-prompt/misidentified leptons. A tight cut is performed on each lepton by constructing the energy for the track/Calo object inside a R=0.2 cone and then doing a cut which depends on $p_t$ and $\eta$. The energy must be over this cut value. A variable R cut is also performed on tracks only for the loosetrackonly requirement. This reduces the size of the cone since the Z $\rightarrow$  ll cone will reduce in size for higher pt.   
+
+
+Calorimeter jets are corrected by adding muon inside jet to jet. $H \rightarrow b \bar{b}$ reconstructed with 1.0 large R jet, which focuses on pt > 250 GeV since less than this will be in a larger jet. Smaller R jets are used for Etmiss which must use a set eta and pt > 20 GeV for JES calibration to be valid. Note the JES must be compared to MC since the real detector will have some energy loses. This is also an additional uncertainty for the final fit.  To reduce jets not from the primary vertices other than hard scattering vertex JVT recommendations for pt < 50 GeV smaller R jets is used.  JVT is used to reduce pile up by determining the primary vertex and then determining the amount of energy which comes from this. 
+
+Overlapping jets with electrons are removed if within R < 0.2 
+
+\section{Triggers}
+The trigger efficiency depends on a particular sample. A sample here is a selection of cuts after requiring these triggers.  The efficiency is determined by taking a selection of events from the sample and running this through the trigger. The efficiency is just the ratio before and after the trigger. Note the efficiency will depend of some observable, e.g VH mass. A scale factor must also be used to determine the different between MC and data. 
+
+\section{Selection}
+
+The number of VHLoose lepton number is varied to keep the 0/1/2 lepton channel orthogonal. 
+
+In the two lepton channel the muon momentum resolution deteriorates at high pt so the pt is scaled by $\frac{m_{ZZ}}{m_{\mu \mu}}$.
+
+W mass constraint used in the 1 lepton channel to determine neutrino pt. 
+
+Geometric cuts are used in the 0 lepton channel. 
+
+After these kinematic cuts then the H $\rightarrow b\bar{b}$ is exploited to increase sensitivity. This is also used to define control regions. This is done looking at the mass and number of b tags.  
+
+\section{Multijet}
+
+
+\section{Nuisance Check update (NP Pruning)}
+
+
+\section{CMake Introduction)}
+%INCLUDE >>> Will run cmake code from another file
+%LIST >>> Will do a variety of task with lists. APPEND will create a list.
+%To see a list of FIND_PACKAGE entries do: cmake --help-module-list  
+%FIND_PACKAGE had two modes: 1) module => searches CMAKE_MODULE_PATH  2)Config
+%
+%Will set the following variable:
+%  <name>_FOUND  // true iff the package was found
+%  <name>_INCLUDE_DIR   // a list of directories containing the package's include files
+%  <name>_LIBRARIES     // a list of directories containing the package's libraries
+%  <name>_LINK_DIRECTORIES  // the list of the package's libraries
+%  
+%  .a static or .lib (windows) => so code compiled within
+%  
+%  .so dynamic .dll (windows) references to the code given outside
+%  
+%  Need to link lib with EUTelescope with 
+%  -DBoost_NO_BOOST_CMAKE=ON
+
+
+
+
+\section{Abbreviations}
+\begin{itemize} 
+\item EDM $\rightarrow$ Event Data Model 
+\item GRL $\rightarrow$ Good Run List 
+\item JES $\rightarrow$ Jet Energy Scale
+\item JVT $rightarrow$  Jet Vertex Tagger
+\end{itemize}
+
+
+
+
