@@ -10,25 +10,50 @@
 \contentsline {section}{\numberline {1.3}Beyond the Standard Model and $VH\rightarrow b\mathaccentV {bar}016{b}$+$ll/l\nu /\nu \nu /qq$}{8}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Cut Optimisation and Significance}{8}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}My contribution}{8}{subsection.1.3.2}
-\contentsline {chapter}{\numberline {2}The integration of the General Broken Lines fitting algorithm into EUTelescope.}{14}{chapter.2}
-\contentsline {subsection}{\numberline {2.0.3}The triplet finder}{14}{subsection.2.0.3}
-\contentsline {subsection}{\numberline {2.0.4}Creating a link between all points}{14}{subsection.2.0.4}
-\contentsline {subsection}{\numberline {2.0.5}Propagation from Global to Measurement Frame}{14}{subsection.2.0.5}
-\contentsline {subsection}{\numberline {2.0.6}EUTelelecope}{15}{subsection.2.0.6}
-\contentsline {subsection}{\numberline {2.0.7}Pattern Recognition, Track Fitting and Alignment}{15}{subsection.2.0.7}
-\contentsline {subsection}{\numberline {2.0.8}General Broken Lines (GBL) and EUTelescope}{17}{subsection.2.0.8}
-\contentsline {section}{\numberline {2.1}My contribution}{18}{section.2.1}
-\contentsline {chapter}{\numberline {3}Further Work }{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Alignment Studies}{21}{section.3.1}
-\contentsline {section}{\numberline {3.2}Resonance Searches}{22}{section.3.2}
-\contentsline {subsection}{\numberline {.0.1}Gantt Chart}{23}{subsection.Alph0.0.1}
-\contentsline {chapter}{\numberline {A}Guide to Resonance Search}{24}{appendix.A}
-\contentsline {section}{\numberline {A.1}Introduction}{24}{section.A.1}
-\contentsline {section}{\numberline {A.2}Theory and past searches}{24}{section.A.2}
-\contentsline {section}{\numberline {A.3}Data and MC samples}{24}{section.A.3}
-\contentsline {section}{\numberline {A.4}Triggers}{25}{section.A.4}
-\contentsline {section}{\numberline {A.5}Selection}{25}{section.A.5}
-\contentsline {section}{\numberline {A.6}Multijet}{26}{section.A.6}
-\contentsline {section}{\numberline {A.7}Nuisance Check update (NP Pruning)}{26}{section.A.7}
-\contentsline {section}{\numberline {A.8}CMake Introduction)}{26}{section.A.8}
-\contentsline {section}{\numberline {A.9}Abbreviations}{26}{section.A.9}
+\contentsline {section}{\numberline {1.4}The Standard Model}{13}{section.1.4}
+\contentsline {section}{\numberline {1.5}Exotic Searches}{14}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}VH Analysis specific}{15}{subsection.1.5.1}
+\contentsline {section}{\numberline {1.6}MVA}{15}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}My Contribution}{15}{subsection.1.6.1}
+\contentsline {section}{\numberline {1.7}Statistical modelling}{15}{section.1.7}
+\contentsline {subsection}{\numberline {1.7.1}Conceptual view of probability}{15}{subsection.1.7.1}
+\contentsline {subsection}{\numberline {1.7.2}Modelling Systematic Uncertainties}{15}{subsection.1.7.2}
+\contentsline {section}{\numberline {1.8}Resonance Finder}{16}{section.1.8}
+\contentsline {section}{\numberline {1.9}VH Analysis specific Systematic Uncertainties}{17}{section.1.9}
+\contentsline {subsection}{\numberline {1.9.1}My Contribution}{17}{subsection.1.9.1}
+\contentsline {subsubsection}{Post-fit Plotting}{17}{section*.12}
+\contentsline {chapter}{\numberline {2}The integration of the General Broken Lines fitting algorithm into EUTelescope.}{18}{chapter.2}
+\contentsline {subsection}{\numberline {2.0.2}The triplet finder}{18}{subsection.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}Creating a link between all points}{18}{subsection.2.0.3}
+\contentsline {subsection}{\numberline {2.0.4}Propagation from Global to Measurement Frame}{18}{subsection.2.0.4}
+\contentsline {subsection}{\numberline {2.0.5}EUTelelecope}{19}{subsection.2.0.5}
+\contentsline {subsection}{\numberline {2.0.6}Pattern Recognition, Track Fitting and Alignment}{19}{subsection.2.0.6}
+\contentsline {subsection}{\numberline {2.0.7}General Broken Lines (GBL) and EUTelescope}{27}{subsection.2.0.7}
+\contentsline {section}{\numberline {2.1}My contribution}{27}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Upgrade sensors}{30}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Track Fitting}{32}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}ATLAS ITK Upgrade}{32}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Prototypes}{33}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Radial Strips}{33}{subsection.2.1.5}
+\contentsline {subsubsection}{TGeo and Coordinate transformations}{33}{section*.28}
+\contentsline {section}{\numberline {2.2}The five fold way}{38}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Linking trajectory points}{38}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Add measurement information to points}{39}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Add scattering information}{41}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Add global parameters}{45}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Add local parameters}{49}{subsection.2.2.5}
+\contentsline {chapter}{\numberline {3}Further Work }{50}{chapter.3}
+\contentsline {section}{\numberline {3.1}Alignment Studies}{50}{section.3.1}
+\contentsline {section}{\numberline {3.2}Resonance Searches}{51}{section.3.2}
+\contentsline {subsection}{\numberline {.0.1}Gantt Chart}{52}{subsection.Alph0.0.1}
+\contentsline {chapter}{\numberline {A}Guide to Resonance Search}{53}{appendix.A}
+\contentsline {section}{\numberline {A.1}Introduction}{53}{section.A.1}
+\contentsline {section}{\numberline {A.2}Theory and past searches}{53}{section.A.2}
+\contentsline {section}{\numberline {A.3}Data and MC samples}{53}{section.A.3}
+\contentsline {section}{\numberline {A.4}Triggers}{54}{section.A.4}
+\contentsline {section}{\numberline {A.5}Selection}{54}{section.A.5}
+\contentsline {section}{\numberline {A.6}Multijet}{55}{section.A.6}
+\contentsline {section}{\numberline {A.7}Nuisance Check update (NP Pruning)}{55}{section.A.7}
+\contentsline {section}{\numberline {A.8}CMake Introduction)}{55}{section.A.8}
+\contentsline {section}{\numberline {A.9}CxAODMaker}{55}{section.A.9}
+\contentsline {section}{\numberline {A.10}Abbreviations}{55}{section.A.10}

@@ -1,4 +1,4 @@
-The variable R studies are based on standard model VH production Monte Carlo which is discussed in section \ref{decay}. The optimisation studies are for VH resonances and is motivated in section \ref{resonance}.  
+The variable R studies are based on standard model VH production Monte Carlo which is discussed in section \ref{decay}. The optimisation studies are for VH resonances and is motivated in section \ref{resonance}. 
 \section{Introduction}
 An introduction to the process of Monte Carlo simulation and the ATLAS detector is needed before any description of the search can be understood.
 \subsection{Simulation}
@@ -93,7 +93,9 @@ The highly boosted decay products of the Higgs will often be unresolved. Therefo
 \end{figure}
 
 The variable R jet have a smaller angular displacement compared to the B-hadron. Figure \ref{fig:drpt} shows the variable-R jets with a smaller angular separation at higher $P_T$ compared to the anti-kt algorithm. 
-
+\\
+\textbf{Should put this analysis in context with others}
+\\
 \section{Beyond the Standard Model and $VH\rightarrow b\bar{b}$+$ll/l\nu/\nu\nu/qq$}
 \label{resonance}
 With the discovery of a Higgs consistent with the Standard Model the question of naturalness is under reexamination\cite{natural}. The naturalness problem arises through the corrections the Higgs mass receives from virtual particles. If the virtual particles can take any momentum to the Planck mass scale then the correction must be huge. This is strange since the Higgs mass is a relatively small, therefore it is natural to think that there must exist a cut off for the maximum momentum taken by the virtual particles.  
@@ -192,3 +194,136 @@ The search would like to have common selection for the 1 and 1.5 TeV resonances.
 \end{figure}
 
 The substructure variables both have an improvement on the significance compared to the topological cut alone. The $m_{H}$ variable has the most drastic improvement. However the $\sqrt{d12}$ could seen further improvement after trimming. 
+
+\section{The Standard Model}
+Glashow-Salam-Weinberg Theory $SU(2)_L \otimes U(1)_Y$ explains parity and CP violation. 
+=>Example of separate violations. 
+The Electroweak theory describes the electromagnetic and weak interaction. The gauge group is spontaneously broken by the HIgg's mechanism.
+=> Example of Higgs mechanism with ferromagnets. 
+Left handed fields transform as  $SU(2)_L$ doublets. Left handed fields transform as  $SU(2)_R$ singlets. The singlet representation of the SU(2) group by definition does not transform the right-handed field. The left-handed fields transform by the fundamental representation.
+%bmatrix will create square brackets. 
+ \begin{equation}
+     \begin{pmatrix}
+         \nu_e \\
+         e \\
+        \end{pmatrix}_{L}
+        \rightarrow
+      \begin{pmatrix}
+         \nu'_{e}\\
+         e' \\
+        \end{pmatrix}_L
+        	=e^{i\Lambda^{a}T^{a}}
+	\begin{pmatrix}
+         \nu_e \\
+         e \\
+        \end{pmatrix}_L
+ \end{equation}
+ 
+  \begin{equation}
+     \begin{pmatrix}
+         u \\
+         d \\
+        \end{pmatrix}_{L}
+        \rightarrow
+      \begin{pmatrix}
+         u'\\
+         d' \\
+        \end{pmatrix}_L
+        	=e^{i\Lambda^{a}T^{a}}
+	\begin{pmatrix}
+         u \\
+         d \\
+        \end{pmatrix}_L
+ \end{equation}
+ 
+   \begin{equation}
+e_R  \rightarrow e'_R = e_R 
+ \end{equation}
+    \begin{equation}
+u_R  \rightarrow u'_R = u_R 
+ \end{equation}
+     \begin{equation}
+d_R  \rightarrow d'_R = d_R 
+ \end{equation}
+The neutrino does not a right-handed counter part. ??I think this is due to it's massless nature. This is also why neutrino mass is BSM physics.??  
+
+An important idea 
+
+=> Need to describe briefly the SM.  <Look at harvards schpeal> 
+
+
+\section{Exotic Searches}
+The standard model is the most accurate predictive model we have of elementary particle physics. However some aspects of the theory are inconsistent or incomplete.  
+One inconsistency is the naturalness problem which suggests the SM shouldn't be valid beyond a few TeV. Many theories have been hypothesised to reconcile this behaviour, with the theories predicting a new string interaction at higher scales. This new interaction would generally predict the existence of new resonances.
+The exclusion of gravity from the theory is a clear indicator of it's incompleteness <ref strong gravity>.  
+
+The search for new phenomena beyond the standard model can be undertaken in many ways. Model agnostic such as looking for excesses in the dijet mass/angular spectrum relative to QCD predictions <refdijet>.  Different benchmark signal models for quantum black holes, excited quarks, $W^{'} and Z^{'}$ can then be compared to SM background to determine exclusion limits. More model dependent searches will look at particular decays channels to compare to BSM theories. In each case the difference in phase space being probed will lead to many different analysis techniques being used. Since different backgrounds will dominate different regions and their uncertainties will also be propagated onto the final measurement. 
+
+
+
+ (A->ZH). 
+\subsection{VH Analysis specific}
+
+
+\section{MVA}
+\subsection{My Contribution} 
+Check topology and mVH discriminating power
+
+\section{Statistical modelling}
+=> Only a few statistical methods used in general in limit setting
+=> Different methods all based on likelihood function 
+=> test statistics =>Neyman lemma => Different forms used in resonance finder. => Quote the one we use 
+\subsection{Conceptual view of probability}
+=>Likelihood/Bayesian/Frequentist
+\subsection{Modelling Systematic Uncertainties}
+
+
+=>pllguide....pdf
+	Systematic uncertainties must be parameterised in some way, otherwise they can't be evaluated or their uncertainties propagated onto the signal strength (POI). 
+	Systematic uncertainties come in a variety of different forms, these forms can be roughly outlined with reference to Pekka Sinervo's PhyStat2003 classication <ref>
+	\begin{description} 
+		\item[good] Good systematic uncertainties have a clear cause and a clear evaluation strategy.
+		\item[bad]  Bad systematic uncertainties have a clear cause but no clear evaluation strategy.
+		\item[ugly] Ugly systematic uncertainties have no clear cause and no clear evaluation strategy.  
+	\end{description} 
+	Good systematic uncertainties such as the jet energy scale can in most cases be easily included into the likelihood function. Bad systematic uncertainties such as the fragmentation 			uncertainty must be deduced from running different MC generators, however it is clear that this is not an exhaustive parameterisation of the uncertainty. <<ugly>> 
+	The behaviour of the likelihood fit must be investigated to ensure no mis-modelling. A simple set of recommendation is outlined <<ref param paper>>
+	\begin{description}
+	\item[Pulls and Correlations.] 	
+	\item [Understand the simplification of systematic uncertainties not in-situ constrained.] So if JES depends on pt but a single NP is used. Then you must make sure this is justified. This is most important with constrained 	NP since how they are constrained should depend on pt in this example.  
+	\item [Understand the simplification of systematic uncertainties in-situ constrained.]  Uncorrelated systematic uncertainties which are in-situ constrained should not be combined. Since 	this would lead to less realistic modelling. 
+	\item [if a simplified constraint is used then test it with variability over that phase space ]  Create two different parameterisations of the syst, i.e two different templates. ???? 
+	\item [Using artificial unconstrained NP]  so you break a NP into N parts. These have small statistical weight on the final fit. Must make sure they are uncorrelated. 
+	%Remember profiling is just adding them to the fit
+	\item [bad/ugly syst should not be profiled]  If these systematics are included and constrained then this is wrong. Since you have no idea how to correctly constrain these parameters.   
+	\end{description} 
+	 
+
+
+=>Different types of uncertainties  
+=> Normalisation/shape NP. 
+=> Pulls => constraints and pull due to reduction in phase space => Used to check validity of model 
+=> Correlations => NP should be uncorrelated. 
+\section{Resonance Finder}
+=> The different methods with resonance finder=> asymptoticLimits.pdf (Calculators)
+=>template histograms.  => Morphing 
+=> Incorporation of statistical uncertainty => Barlow-beeson lite. 
+=>CR/SR
+=> All information stored in WS => HistFactory 
+=> Fit to data => MINOS fit => likelihood fit used. 
+Limits => CLs 
+\section{VH Analysis specific Systematic Uncertainties}
+Systematic uncertainties can be categories as experimental uncertainties, uncertainties on the modeling of background processes estimated from simulation, and theoretical uncertainties on the signal processes. 
+??? How exactly do we get all the systematic histogram for mVH??? Is this done with the xAOD tools? 
+
+Show correlation co-efficients 
+
+\subsection{My Contribution}
+\subsubsection{Post-fit Plotting}
+Profile=> Just means include in fit. 
+Pruning=>  If 50\% of bins don't meet variation threshold then this variation is removed. 
+Post fit plots =>  Update code to 
+NP pruning => 
+Adding results file output to runAsympototic
+
+
